@@ -1,0 +1,6 @@
+@Thread.Api_HostAddress = http://localhost:5073
+
+GET {{Thread.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
