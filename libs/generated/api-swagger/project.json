@@ -1,0 +1,26 @@
+{
+    "name": "api-swagger",
+    "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+    "targets": {
+      "build": {
+        "executor": "nx:noop",
+        "outputs": ["{projectRoot}"]
+      },
+      "codegen": {
+        "executor": "@nx-dotnet/core:openapi-codegen",
+        "outputs": ["{workspaceRoot}/libs/generated/webapi-types"],
+        "options": {
+          "openapiJsonPath": "libs/generated/api-swagger/swagger.json",
+          "outputProject": "api-types"
+        }
+      },
+      "openapi-codegen": {
+        "executor": "nx:run-commands",
+        "outputs": ["{workspaceRoot}/libs/generated/openapi-types"],
+        "options": {
+          "command": "npx openapi-generator-cli generate -g typescript-fetch -i ./libs/generated/api-swagger/swagger.json -o ./libs/generated/api-types"
+        }
+      }
+    },
+    "implicitDependencies": ["api"]
+}
