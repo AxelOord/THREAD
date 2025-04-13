@@ -17,5 +17,10 @@
     "strict": true,
     "target": "es2022",
     "customConditions": ["development"]
+  },
+  "paths": {
+    "@thread/api-types": [
+        "dist/libs/generated/api-types"
+      ]
   }
 }

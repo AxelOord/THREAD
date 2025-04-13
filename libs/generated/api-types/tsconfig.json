@@ -1,0 +1,27 @@
+{
+    "extends": "../../../tsconfig.base.json",
+    "compilerOptions": {
+      "module": "NodeNext",
+      "forceConsistentCasingInFileNames": true,
+      "strict": false,
+      "noImplicitOverride": false,
+      "noPropertyAccessFromIndexSignature": false,
+      "noImplicitReturns": false,
+      "noFallthroughCasesInSwitch": false,
+      "noUnusedLocals": false,
+      "outDir": "../../../dist/libs/generated/api-types",
+      "lib": ["es2022", "dom"]
+    },
+    "include": ["**/*.ts"],
+    "exclude": ["node_modules", "dist"],
+    "files": [],
+    "references": [
+      {
+        "path": "./tsconfig.lib.json"
+      },
+      {
+        "path": "./tsconfig.spec.json"
+      }
+    ]
+  }
+  

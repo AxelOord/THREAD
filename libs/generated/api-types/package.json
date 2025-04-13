@@ -1,0 +1,6 @@
+{
+    "name": "@thread/api-types",
+    "version": "*",
+    "type": "commonjs",
+    "private": true
+  }

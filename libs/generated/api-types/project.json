@@ -1,11 +1,18 @@
 {
-    "name": "api-types",
-    "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-    "targets": {
-      "build": {
-        "executor": "nx:noop",
-        "outputs": ["{projectRoot}"]
+  "name": "api-types",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/generated/api-types",
+        "main": "libs/generated/api-types/index.ts",
+        "tsConfig": "libs/generated/api-types/tsconfig.json",
+        "assets": ["libs/generated/api-types/*.md"],
+        "generatePackageJson": true
       }
-    },
-    "implicitDependencies": ["api"]
+    }
+  },
+  "implicitDependencies": ["api"]
 }
