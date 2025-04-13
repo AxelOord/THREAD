@@ -1,15 +1,13 @@
 {
   "openapi": "3.0.4",
   "info": {
-    "title": "Thread.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-    "version": "1.0"
+    "title": "Thread",
+    "version": "v1"
   },
   "paths": {
     "/weatherforecast": {
       "get": {
-        "tags": [
-          "Thread.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
-        ],
+        "tags": ["Weather"],
         "operationId": "GetWeatherForecast",
         "responses": {
           "200": {

@@ -2,17 +2,41 @@
   "name": "api-types",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "targets": {
-    "build": {
-      "executor": "@nx/js:tsc",
-      "outputs": ["{options.outputPath}"],
+    "codegen": {
+      "executor": "nx:run-commands",
+      "outputs": [
+        "{workspaceRoot}/libs/generated/openapi-types"
+      ],
       "options": {
-        "outputPath": "dist/libs/generated/api-types",
-        "main": "libs/generated/api-types/index.ts",
-        "tsConfig": "libs/generated/api-types/tsconfig.json",
-        "assets": ["libs/generated/api-types/*.md"],
-        "generatePackageJson": true
-      }
+        "command": "npx openapi-generator-cli generate"
+      },
+      "dependsOn": [
+        {
+          "target": "swagger",
+          "projects": "api"
+        }
+      ]
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "cwd": "libs/generated/api-types",
+        "commands": [
+          "npm run build"
+        ]
+      },
+      "dependsOn": [
+        {
+          "target": "codegen",
+          "projects": "self"
+        }
+      ]
     }
   },
-  "implicitDependencies": ["api"]
+  "implicitDependencies": [
+    "api"
+  ]
 }

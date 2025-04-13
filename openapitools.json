@@ -2,6 +2,20 @@
   "$schema": "./node_modules/@openapitools/openapi-generator-cli/config.schema.json",
   "spaces": 2,
   "generator-cli": {
-    "version": "7.12.0"
+    "version": "7.12.0",
+    "generators": {
+      "thread-api": {
+        "generatorName": "typescript-fetch",
+        "output": "./libs/generated/api-types",
+        "inputSpec": "./libs/generated/api-types/swagger.json",
+        "additionalProperties": {
+          "supportsES6": true,
+          "useSingleRequestParameter": true,
+          "npmName": "@thread/api-types",
+          "npmVersion": "1.0.0",
+          "modelPropertyNaming": "original"
+        }
+      }
+    }
   }
 }

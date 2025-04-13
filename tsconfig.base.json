@@ -20,7 +20,7 @@
   },
   "paths": {
     "@thread/api-types": [
-        "dist/libs/generated/api-types"
+        "dist/libs/generated/api-types/src"
       ]
   }
 }

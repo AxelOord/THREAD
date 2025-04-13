@@ -3,7 +3,17 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+    {
+        Title = "Thread",
+        Version = "v1"
+    });
+
+    // Configure operation tags
+    c.TagActionsBy(api => new[] { "Weather" });
+});
 
 var app = builder.Build();
 

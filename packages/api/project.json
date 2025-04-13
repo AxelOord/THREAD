@@ -9,7 +9,7 @@
       "executor": "@nx-dotnet/core:update-swagger",
       "outputs": ["{workspaceRoot}/options.output"],
       "options": {
-        "output": "libs/generated/api-swagger/swagger.json"
+        "output": "libs/generated/api-types/swagger.json"
       },
       "dependsOn": [
         "build"

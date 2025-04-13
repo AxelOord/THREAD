@@ -1,8 +1,12 @@
-import { WeatherForecast } from '@thread/api-types';
+import { WeatherApi, Configuration } from '@thread/api-types';
+
+const config = new Configuration({
+  basePath: 'http://localhost:5073'
+});
+
+const api = new WeatherApi(config);
 
 export async function GET(request: Request) {
-  const response = await fetch('http://localhost:5073/weatherforecast');
-  const forecasts: WeatherForecast[] = await response.json();
-  
-  return Response.json(forecasts);
+  const response = await api.getWeatherForecast();
+  return Response.json(response);
 }
