@@ -1,0 +1,22 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "."
+  },
+  "include": [
+    "next-env.d.ts",
+    "next.config.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "../../libs",
+    "../../apps",
+    "./**/*"
+  ],
+  "exclude": ["**/*.stories.ts", "**/*.stories.js"],
+  "references": [
+    {
+      "path": "./tsconfig.storybook.json"
+    }
+  ]
+}

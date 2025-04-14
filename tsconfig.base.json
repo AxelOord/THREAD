@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "composite": true,
     "declarationMap": true,
     "emitDeclarationOnly": true,
@@ -16,11 +17,11 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es2022",
-    "customConditions": ["development"]
-  },
-  "paths": {
-    "@thread/api-types": [
-        "dist/libs/generated/api-types/src"
-      ]
+    "customConditions": ["development"],
+    "paths": {
+      "@thread/api-types": ["dist/libs/generated/api-types/src"],
+      "@thread/design-system": ["libs/design-system/src/index.ts"],
+      "@thread/design-system/server": ["libs/design-system/src/server.ts"]
+    }
   }
 }

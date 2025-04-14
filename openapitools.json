@@ -13,7 +13,8 @@
           "useSingleRequestParameter": true,
           "npmName": "@thread/api-types",
           "npmVersion": "1.0.0",
-          "modelPropertyNaming": "original"
+          "modelPropertyNaming": "original",
+          "withInterfaces": true
         }
       }
     }

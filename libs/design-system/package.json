@@ -1,0 +1,8 @@
+{
+    "name": "@thread/design-system",
+    "exports": {
+      "./global.css": "./src/lib/global.css",
+      "./*": "./src/*"
+    }
+  }
+  

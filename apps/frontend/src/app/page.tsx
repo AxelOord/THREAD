@@ -1,3 +1,6 @@
+import { DesignSystem } from '@thread/design-system';
+
+
 export default function Index() {
   /*
    * Replace the elements below with your own.
@@ -7,6 +10,7 @@ export default function Index() {
   return (
     <div>
       <div className="wrapper">
+        <DesignSystem />
         <div className="container">
           <div id="welcome">
             <h1>

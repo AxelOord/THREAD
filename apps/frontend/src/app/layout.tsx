@@ -1,4 +1,5 @@
 import './global.css';
+import '@thread/design-system/global.css';
 
 export const metadata = {
   title: 'Welcome to frontend',

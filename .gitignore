@@ -44,3 +44,7 @@ Thumbs.db
 # Next.js
 .next
 out
+
+storybook-static
+vite.config.*.timestamp*
+vitest.config.*.timestamp*

@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "paths": {
+      "@thread/design-system": ["../../libs/design-system/src/index.ts"],
+      "@thread/design-system/server": ["../../libs/design-system/src/server.ts"]
+    },
+  },
+  "exclude": ["src/**/*.spec.ts", "src/**/*.test.ts"],
+  "include": [
+    "src/**/*.stories.ts",
+    "src/**/*.stories.js",
+    "src/**/*.stories.jsx",
+    "src/**/*.stories.tsx",
+    "src/**/*.stories.mdx",
+    ".storybook/*.js",
+    ".storybook/*.ts",
+    "../../libs",
+    "../../apps"
+  ]
+}
